@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PenNet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet">
+    
+    <script src="__PUBLIC__/js/jquery/jquery.js"></script>
+    <script src="__PUBLIC__/js/bootstrap/bootstrap.js"></script>
+  </head>
+
+<body>
+  <include file="./Public/tpl/header.html" />
+  <div class="container">
+    <div class="page-header">
+      <h1>主机信息</h1>
+    </div>
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>ID</th>
+        <th>IP地址</th>
+        <th>更新时间</th>
+        <th>操作</th>
+      </tr>
+      <volist name="list" id="hosts">
+        <tr>
+          <td>{$hosts.id}</td>
+          <td>{$hosts.address}</td>
+          <td>{$hosts.updated_at}</td>
+          <td><a href="__URL__/services?id={$hosts.id}">服务检测</a>&nbsp;&nbsp;<a href="__URL__/infos?id={$hosts.id}">信息检测</a>&nbsp;&nbsp;<a href="__URL__/auths?id={$hosts.id}">提权检测</a></td>
+        </tr>
+      </volist>
+    </table> 
+  </div>
+</body>
+</html>

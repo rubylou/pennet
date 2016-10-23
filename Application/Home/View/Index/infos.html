@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PenNet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet">
+    
+    <script src="__PUBLIC__/js/jquery/jquery.js"></script>
+    <script src="__PUBLIC__/js/bootstrap/bootstrap.js"></script>
+  </head>
+
+<body>
+  <include file="./Public/tpl/header.html" />
+  <div class="container">
+    <div class="page-header">
+      <h1>信息收集</h1>
+    </div>
+    <!-- <div class="row">
+      <div class="col-md-12">
+        <table class="table table-striped table-hover table-condensed">
+          <tr>
+            <th>ID</th>
+            <th>类别</th>
+            <th>描述</th>
+            <th>名称</th>
+            <th>服务</th>
+            <th>更新时间</th>
+          </tr>
+          <volist name="list" id="loots">
+            <tr>
+              <td>{$loots.id}</td>
+              <td>{$loots.ltype}</td>
+              <td>{$loots.info}</td>
+              <td><a href="{$loots.path}">{$loots.name}</a></td>
+              <td>{$loots.service_name}</td>
+              <td>{$loots.updated_at}</td>
+              <td><a href="__URL__/services?id={$loots.id}">服务检测</a>&nbsp;&nbsp;<a href="__URL__/infos?id={$loots.id}">信息检测</a>&nbsp;&nbsp;<a href="__URL__/auths?id={$loots.id}">提权检测</a></td> 
+            </tr>
+          </volist>
+        </table> 
+      </div>
+    </div> -->
+
+    <!-- Management Console Information Panel -->
+    <div class="row">
+      <div class="col-md-10">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Management Console Information</div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-12">
+                <ul class="list-group">
+
+                  <div class="list-group-item">
+                    <h4 class="list-group-item-heading text-info">Version</h4>
+                    <volist name = "version" id="version">
+                      <p class="list-group-item-text">{$version.data}&nbsp;&nbsp;&nbsp;<small>{$version.updated_at}</small></p>
+                    </volist>   
+                  </div>
+
+                  <div class="list-group-item">
+                    <h4 class="list-group-item-heading text-info">Environment Variables</h4>
+                    <volist name = "env" id="env">
+                      <p class="list-group-item-text">{$env.data}&nbsp;&nbsp;&nbsp;<small>{$env.updated_at}</small></p>
+                    </volist>
+                  </div>
+
+                  <div class="list-group-item">
+                    <h4 class="list-group-item-heading text-info">Users</h4>
+                    <volist name = "users" id="users">
+                      <p class="list-group-item-text">{$users.data}&nbsp;&nbsp;&nbsp;<small>{$users.updated_at}</small></p>
+                    </volist>
+                  </div>
+
+                  <div class="list-group-item">
+                    <h4 class="list-group-item-heading text-info">Instance Properties</h4>
+                    <volist name = "instance" id="instance">
+                      <p class="list-group-item-text">{$instance.data}&nbsp;&nbsp;&nbsp;<small>{$instance.updated_at}</small></p>
+                    </volist>
+                  </div> 
+
+                  <div class="list-group-item">
+                    <h4 class="list-group-item-heading text-info">Process Information</h4>
+                    <volist name = "process" id="process">
+                      <p class="list-group-item-text">{$process.info}: {$process.path}&nbsp;&nbsp;&nbsp;<small>{$process.updated_at}</small></p>
+                    </volist>
+                  </div>
+
+                  <div class="list-group-item">
+                    <h4 class="list-group-item-heading text-info">Startup Profile</h4>
+                    <volist name = "profile" id="profile">
+                      <p class="list-group-item-text">{$profile.info}: {$profile.path}&nbsp;&nbsp;&nbsp;<small>{$profile.updated_at}</small></p>
+                    </volist>
+                  </div> 
+
+                  <div class="list-group-item">
+                    <h4 class="list-group-item-heading text-info">ABAP Syslog</h4>
+                    <volist name = "abapsyslog" id="abapsyslog">
+                      <p class="list-group-item-text">{$abapsyslog.info}: {$abapsyslog.path}&nbsp;&nbsp;&nbsp;<small>{$abapsyslog.updated_at}</small></p>
+                    </volist>
+                  </div> 
+
+                  <div class="list-group-item">
+                    <h4 class="list-group-item-heading text-info">Trace Files and Log Files</h4>
+                    <volist name = "logfiles" id="logfiles">
+                      <p class="list-group-item-text">{$logfiles.info}: {$logfiles.path}&nbsp;&nbsp;&nbsp;<small>{$logfiles.updated_at}</small></p>
+                    </volist>
+                  </div> 
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOAP RFC Information Panel -->
+    <div class="row">
+      <div class="col-md-10">
+        <div class="panel panel-success">
+          <div class="panel-heading">SOAP RFC Information</div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-12">
+                <ul class="list-group">
+                  <div class="list-group-item">
+                    <h4 class="list-group-item-heading text-success">System Information</h4>
+                    <volist name = "system" id="system">
+                      <p class="list-group-item-text">{$system.data}&nbsp;&nbsp;&nbsp;<small>{$system.updated_at}</small></p>
+                    </volist>   
+                  </div>
+                  <div class="list-group-item">
+                    <h4 class="list-group-item-heading text-success">SAP Information Disclosure</h4>
+                    <volist name = "saprel" id="saprel">
+                      <p class="list-group-item-text">{$saprel.data}&nbsp;&nbsp;&nbsp;<small>{$saprel.updated_at}</small></p>
+                    </volist>
+                  </div>
+                  <div class="list-group-item">
+                    <h4 class="list-group-item-heading text-success">Directory Trasversal</h4>
+                    <volist name = "readdir" id="readdir">
+                      <p class="list-group-item-text">{$readdir.info}: {$readdir.path}&nbsp;&nbsp;&nbsp;<small>{$readdir.updated_at}</small></p>
+                    </volist>
+                  </div> 
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>

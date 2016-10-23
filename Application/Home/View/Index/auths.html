@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PenNet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet">
+    
+    <script src="__PUBLIC__/js/jquery/jquery.js"></script>
+    <script src="__PUBLIC__/js/bootstrap/bootstrap.js"></script>
+  </head>
+
+<body>
+  <include file="./Public/tpl/header.html" />
+  <div class="container">
+    <div class="page-header">
+      <h1>提权检测</h1>
+    </div>
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>ID</th>
+        <th>IP地址</th>
+        <th>端口</th>
+        <th>服务名称</th>
+        <th>用户名</th>
+        <th>密码</th>
+        <th>状态</th>
+        <th>更新时间</th>
+        <!-- <th>操作</th> -->
+      </tr>
+      <volist name="list" id="auths">
+        <tr>
+          <td>{$auths.id}</td>
+          <td>{$auths.address}</td>
+          <td>{$auths.port}</td>
+          <td>{$auths.name}</td>
+          <td>{$auths.username}</td>
+          <td>{$auths.data}</td>
+          <td>{$auths.status}</td>
+          <td>{$auths.updated_at}</td>
+          <!-- <td><a href="__URL__/services?id={$auths.id}">服务检测</a>&nbsp;&nbsp;<a href="__URL__/infos?id={$auths.id}">信息检测</a>&nbsp;&nbsp;<a href="__URL__/auths?id={$auths.id}">提权检测</a></td> -->
+        </tr>
+      </volist>
+    </table> 
+  </div>
+</body>
+</html>

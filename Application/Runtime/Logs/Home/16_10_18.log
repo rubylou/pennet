@@ -1,0 +1,660 @@
+[ 2016-10-18T08:44:11+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000908s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000994s ]
+SQL: select id, address, updated_at from hosts order by id [ RunTime:0.0383s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000466s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000637s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025443s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025541s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001143s ]
+
+[ 2016-10-18T08:44:14+08:00 ] ::1 /index.php/Home/Index/services?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+SQL: select * from services where host_id=1 and length(name)>0 order by port [ RunTime:0.0301s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011095s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000188s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000489s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000546s ]
+
+[ 2016-10-18T08:44:22+08:00 ] ::1 /index.php/Home/Index/infos?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+SQL: select loots.*, services.name as service_name from loots left join services on service_id = services.id 
+    		where loots.host_id=1 and length(loots.name)>0 order by loots.id [ RunTime:0.0424s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012054s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012145s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001003s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001089s ]
+
+[ 2016-10-18T08:44:26+08:00 ] ::1 /index.php/Home/Index/auths?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000937s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001076s ]
+
+[ 2016-10-18T08:44:31+08:00 ] ::1 /index.php/Home/Index/infos?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+SQL: select loots.*, services.name as service_name from loots left join services on service_id = services.id 
+    		where loots.host_id=1 and length(loots.name)>0 order by loots.id [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009811s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009880s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000533s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000595s ]
+
+[ 2016-10-18T08:54:27+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001009s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001115s ]
+SQL: select id, address, updated_at from hosts order by id [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011647s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011717s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000887s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000965s ]
+
+[ 2016-10-18T08:54:29+08:00 ] ::1 /index.php/Home/Index/auths?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+ERR: 7:ERROR:  column "privates_id" does not exist
+LINE 4: ...t_credential_privates as privates on private_id = privates_i...
+                                                             ^
+ [ SQL语句 ] : select cores.id, publics.username, privates.data, cores.updated_at 
+    		from metasploit_credential_cores as cores
+    		inner join metasploit_credential_publics as publics on public_id = publics.id
+    		inner join metasploit_credential_privates as privates on private_id = privates_id
+ERR: 7:ERROR:  column "privates_id" does not exist
+LINE 4: ...t_credential_privates as privates on private_id = privates_i...
+                                                             ^
+ [ SQL语句 ] : select cores.id, publics.username, privates.data, cores.updated_at 
+    		from metasploit_credential_cores as cores
+    		inner join metasploit_credential_publics as publics on public_id = publics.id
+    		inner join metasploit_credential_privates as privates on private_id = privates_id
+
+[ 2016-10-18T08:54:49+08:00 ] ::1 /index.php/Home/Index/auths?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+SQL: select cores.id, publics.username, privates.data, cores.updated_at 
+    		from metasploit_credential_cores as cores
+    		inner join metasploit_credential_publics as publics on public_id = publics.id
+    		inner join metasploit_credential_privates as privates on private_id = privates.id [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000626s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000692s ]
+
+[ 2016-10-18T09:02:40+08:00 ] ::1 /index.php/Home/Index/auths?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000963s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001164s ]
+SQL: select cores.id, publics.username, privates.data, cores.updated_at, 
+    		origin.module_full_name, services.port, services.state, services.name, hosts.address 
+    		from metasploit_credential_cores as cores
+    		inner join metasploit_credential_publics as publics on public_id = publics.id
+    		inner join metasploit_credential_privates as privates on private_id = privates.id
+    		inner join metasploit_credential_origin_services as origin on origin_id = origin.id
+    		inner join services on origin.service_id = services.id
+    		inner join hosts on services.host_id = hosts.id
+    		where hosts.id = 1 [ RunTime:0.0034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001109s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001203s ]
+
+[ 2016-10-18T09:07:31+08:00 ] ::1 /index.php/Home/Index/auths?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001169s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001283s ]
+SQL: select cores.id, publics.username, privates.data, cores.updated_at, 
+    		origin.module_full_name, services.port, services.state, services.name, hosts.address 
+    		from metasploit_credential_cores as cores
+    		inner join metasploit_credential_publics as publics on public_id = publics.id
+    		inner join metasploit_credential_privates as privates on private_id = privates.id
+    		inner join metasploit_credential_origin_services as origin on origin_id = origin.id
+    		inner join services on origin.service_id = services.id
+    		inner join hosts on services.host_id = hosts.id
+    		where hosts.id = 1 [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013239s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013312s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001003s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001091s ]
+
+[ 2016-10-18T09:07:38+08:00 ] ::1 /index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+SQL: select id, address, updated_at from hosts order by id [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018628s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018741s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000862s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001055s ]
+
+[ 2016-10-18T09:07:40+08:00 ] ::1 /index.php/Home/Index/auths?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000511s ]
+SQL: select cores.id, publics.username, privates.data, cores.updated_at, 
+    		origin.module_full_name, services.port, services.state, services.name, hosts.address 
+    		from metasploit_credential_cores as cores
+    		inner join metasploit_credential_publics as publics on public_id = publics.id
+    		inner join metasploit_credential_privates as privates on private_id = privates.id
+    		inner join metasploit_credential_origin_services as origin on origin_id = origin.id
+    		inner join services on origin.service_id = services.id
+    		inner join hosts on services.host_id = hosts.id
+    		where hosts.id = 1 [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011188s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011256s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000565s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000632s ]
+
+[ 2016-10-18T09:07:46+08:00 ] ::1 /index.php/Home/Index/auths?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000509s ]
+SQL: select cores.id, publics.username, privates.data, cores.updated_at, 
+    		origin.module_full_name, services.port, services.state, services.name, hosts.address 
+    		from metasploit_credential_cores as cores
+    		inner join metasploit_credential_publics as publics on public_id = publics.id
+    		inner join metasploit_credential_privates as privates on private_id = privates.id
+    		inner join metasploit_credential_origin_services as origin on origin_id = origin.id
+    		inner join services on origin.service_id = services.id
+    		inner join hosts on services.host_id = hosts.id
+    		where hosts.id = 2 [ RunTime:0.0032s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011204s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011284s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000151s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000754s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000849s ]
+
+[ 2016-10-18T09:10:05+08:00 ] ::1 /index.php/Home/Index/auths?id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000644s ]
+SQL: select cores.id, publics.username, privates.data, cores.updated_at, 
+    		origin.module_full_name, services.port, services.state, services.name, hosts.address 
+    		from metasploit_credential_cores as cores
+    		inner join metasploit_credential_publics as publics on public_id = publics.id
+    		inner join metasploit_credential_privates as privates on private_id = privates.id
+    		inner join metasploit_credential_origin_services as origin on origin_id = origin.id
+    		inner join services on origin.service_id = services.id
+    		inner join hosts on services.host_id = hosts.id
+    		where hosts.id = 4 [ RunTime:0.0034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009649s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009717s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000152s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000199s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000572s ]
+
+[ 2016-10-18T09:10:10+08:00 ] ::1 /index.php/Home/Index/auths?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000505s ]
+SQL: select cores.id, publics.username, privates.data, cores.updated_at, 
+    		origin.module_full_name, services.port, services.state, services.name, hosts.address 
+    		from metasploit_credential_cores as cores
+    		inner join metasploit_credential_publics as publics on public_id = publics.id
+    		inner join metasploit_credential_privates as privates on private_id = privates.id
+    		inner join metasploit_credential_origin_services as origin on origin_id = origin.id
+    		inner join services on origin.service_id = services.id
+    		inner join hosts on services.host_id = hosts.id
+    		where hosts.id = 3 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009267s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009326s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000188s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000471s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000522s ]
+
+[ 2016-10-18T09:10:15+08:00 ] ::1 /index.php/Home/Index/auths?id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000838s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+SQL: select cores.id, publics.username, privates.data, cores.updated_at, 
+    		origin.module_full_name, services.port, services.state, services.name, hosts.address 
+    		from metasploit_credential_cores as cores
+    		inner join metasploit_credential_publics as publics on public_id = publics.id
+    		inner join metasploit_credential_privates as privates on private_id = privates.id
+    		inner join metasploit_credential_origin_services as origin on origin_id = origin.id
+    		inner join services on origin.service_id = services.id
+    		inner join hosts on services.host_id = hosts.id
+    		where hosts.id = 5 [ RunTime:0.0027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008702s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008762s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000148s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000194s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000471s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000522s ]
+
+[ 2016-10-18T09:10:18+08:00 ] ::1 /index.php/Home/Index/auths?id=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+SQL: select cores.id, publics.username, privates.data, cores.updated_at, 
+    		origin.module_full_name, services.port, services.state, services.name, hosts.address 
+    		from metasploit_credential_cores as cores
+    		inner join metasploit_credential_publics as publics on public_id = publics.id
+    		inner join metasploit_credential_privates as privates on private_id = privates.id
+    		inner join metasploit_credential_origin_services as origin on origin_id = origin.id
+    		inner join services on origin.service_id = services.id
+    		inner join hosts on services.host_id = hosts.id
+    		where hosts.id = 6 [ RunTime:0.0036s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008862s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008931s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000143s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000525s ]
+
+[ 2016-10-18T09:10:22+08:00 ] ::1 /index.php/Home/Index/auths?id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000962s ]
+SQL: select cores.id, publics.username, privates.data, cores.updated_at, 
+    		origin.module_full_name, services.port, services.state, services.name, hosts.address 
+    		from metasploit_credential_cores as cores
+    		inner join metasploit_credential_publics as publics on public_id = publics.id
+    		inner join metasploit_credential_privates as privates on private_id = privates.id
+    		inner join metasploit_credential_origin_services as origin on origin_id = origin.id
+    		inner join services on origin.service_id = services.id
+    		inner join hosts on services.host_id = hosts.id
+    		where hosts.id = 7 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008871s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008931s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000519s ]
+
+[ 2016-10-18T09:10:25+08:00 ] ::1 /index.php/Home/Index/auths?id=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+SQL: select cores.id, publics.username, privates.data, cores.updated_at, 
+    		origin.module_full_name, services.port, services.state, services.name, hosts.address 
+    		from metasploit_credential_cores as cores
+    		inner join metasploit_credential_publics as publics on public_id = publics.id
+    		inner join metasploit_credential_privates as privates on private_id = privates.id
+    		inner join metasploit_credential_origin_services as origin on origin_id = origin.id
+    		inner join services on origin.service_id = services.id
+    		inner join hosts on services.host_id = hosts.id
+    		where hosts.id = 8 [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008581s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008642s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000465s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000516s ]
+
+[ 2016-10-18T09:10:33+08:00 ] ::1 /index.php/Home/Index/auths?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000941s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001072s ]
+SQL: select cores.id, publics.username, privates.data, cores.updated_at, 
+    		origin.module_full_name, services.port, services.state, services.name, hosts.address 
+    		from metasploit_credential_cores as cores
+    		inner join metasploit_credential_publics as publics on public_id = publics.id
+    		inner join metasploit_credential_privates as privates on private_id = privates.id
+    		inner join metasploit_credential_origin_services as origin on origin_id = origin.id
+    		inner join services on origin.service_id = services.id
+    		inner join hosts on services.host_id = hosts.id
+    		where hosts.id = 2 [ RunTime:0.0035s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009714s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009813s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000161s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000214s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000795s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000891s ]
+
+[ 2016-10-18T09:10:51+08:00 ] ::1 /index.php/Home/Index/auths?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000507s ]
+SQL: select cores.id, publics.username, privates.data, cores.updated_at, 
+    		origin.module_full_name, services.port, services.state, services.name, hosts.address 
+    		from metasploit_credential_cores as cores
+    		inner join metasploit_credential_publics as publics on public_id = publics.id
+    		inner join metasploit_credential_privates as privates on private_id = privates.id
+    		inner join metasploit_credential_origin_services as origin on origin_id = origin.id
+    		inner join services on origin.service_id = services.id
+    		inner join hosts on services.host_id = hosts.id
+    		where hosts.id = 1 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010294s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010358s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000148s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000201s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000488s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000543s ]
+
+[ 2016-10-18T09:10:55+08:00 ] ::1 /index.php/Home/Index/auths?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000957s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001139s ]
+SQL: select cores.id, publics.username, privates.data, cores.updated_at, 
+    		origin.module_full_name, services.port, services.state, services.name, hosts.address 
+    		from metasploit_credential_cores as cores
+    		inner join metasploit_credential_publics as publics on public_id = publics.id
+    		inner join metasploit_credential_privates as privates on private_id = privates.id
+    		inner join metasploit_credential_origin_services as origin on origin_id = origin.id
+    		inner join services on origin.service_id = services.id
+    		inner join hosts on services.host_id = hosts.id
+    		where hosts.id = 2 [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008650s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008716s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000660s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000742s ]
+
+[ 2016-10-18T09:11:00+08:00 ] ::1 /index.php/Home/Index/auths?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000509s ]
+SQL: select cores.id, publics.username, privates.data, cores.updated_at, 
+    		origin.module_full_name, services.port, services.state, services.name, hosts.address 
+    		from metasploit_credential_cores as cores
+    		inner join metasploit_credential_publics as publics on public_id = publics.id
+    		inner join metasploit_credential_privates as privates on private_id = privates.id
+    		inner join metasploit_credential_origin_services as origin on origin_id = origin.id
+    		inner join services on origin.service_id = services.id
+    		inner join hosts on services.host_id = hosts.id
+    		where hosts.id = 3 [ RunTime:0.0036s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008674s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008736s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000521s ]
+
+[ 2016-10-18T09:11:03+08:00 ] ::1 /index.php/Home/Index/auths?id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+SQL: select cores.id, publics.username, privates.data, cores.updated_at, 
+    		origin.module_full_name, services.port, services.state, services.name, hosts.address 
+    		from metasploit_credential_cores as cores
+    		inner join metasploit_credential_publics as publics on public_id = publics.id
+    		inner join metasploit_credential_privates as privates on private_id = privates.id
+    		inner join metasploit_credential_origin_services as origin on origin_id = origin.id
+    		inner join services on origin.service_id = services.id
+    		inner join hosts on services.host_id = hosts.id
+    		where hosts.id = 4 [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009351s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009412s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000521s ]
+
+[ 2016-10-18T09:11:08+08:00 ] ::1 /index.php/Home/Index/auths?id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+SQL: select cores.id, publics.username, privates.data, cores.updated_at, 
+    		origin.module_full_name, services.port, services.state, services.name, hosts.address 
+    		from metasploit_credential_cores as cores
+    		inner join metasploit_credential_publics as publics on public_id = publics.id
+    		inner join metasploit_credential_privates as privates on private_id = privates.id
+    		inner join metasploit_credential_origin_services as origin on origin_id = origin.id
+    		inner join services on origin.service_id = services.id
+    		inner join hosts on services.host_id = hosts.id
+    		where hosts.id = 5 [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009566s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009632s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000201s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000472s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000524s ]
+
+[ 2016-10-18T09:11:10+08:00 ] ::1 /index.php/Home/Index/auths?id=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+SQL: select cores.id, publics.username, privates.data, cores.updated_at, 
+    		origin.module_full_name, services.port, services.state, services.name, hosts.address 
+    		from metasploit_credential_cores as cores
+    		inner join metasploit_credential_publics as publics on public_id = publics.id
+    		inner join metasploit_credential_privates as privates on private_id = privates.id
+    		inner join metasploit_credential_origin_services as origin on origin_id = origin.id
+    		inner join services on origin.service_id = services.id
+    		inner join hosts on services.host_id = hosts.id
+    		where hosts.id = 7 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009364s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009424s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000470s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000520s ]
+

@@ -1,0 +1,12 @@
+[ 2016-10-23T11:09:00+08:00 ] ::1 /root/.msf5/loot/20160331103022_default_192.168.3.193_sap.getcomputers_057529.txt
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+ERR: 无法加载模块:Root
+
+[ 2016-10-23T15:26:53+08:00 ] ::1 /root/.msf4/loot/20151225203355_default_10.187.76.54_sap.getaccesspoi_878350.txt
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+ERR: 无法加载模块:Root
+
